@@ -122,9 +122,9 @@ The script is intentionally compact, but there are a few implementation details 
 | Bitmap thresholding | The logo conversion uses a fixed grayscale threshold for 1-bit output. This is a tuning value, not a universal constant. |
 | QR layouts | QR coordinates are hand-tuned per size so captions and footer text remain visible on the fixed label canvas. |
 | Barcode layout | Barcode placement and height are currently tuned for the same 40 x 50 mm stock and may need adjustment for different media. |
+| Barcode defaults | Barcode mode defaults to `code128`, which is the safest choice here because it accepts general text instead of numeric-only input. |
 | BLE pacing | Writes are chunked and slightly delayed because this printer is sensitive to send rate over BLE. |
 | Title width | Title truncation is based on an approximate font-width heuristic, not exact text measurement. |
-| `--tittle` alias | The CLI accepts both `--title` and `--tittle`; the second spelling should be treated as compatibility behavior unless intentionally removed. |
 | Layout debug output | The script prints layout values during QR generation to help with real-world label calibration. |
 
 ## Scope

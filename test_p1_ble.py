@@ -457,7 +457,6 @@ def main():
 
     parser.add_argument(
         "--title",
-        "--tittle",
         dest="title",
         help="Title printed above the QR code in larger simulated-bold text"
     )
